@@ -1,0 +1,234 @@
+.footer {
+    background: #151515;
+    color: #fff;
+    padding: 24px 0 48px 0;
+
+    &__logo {
+        display: block;
+        margin-bottom: 40px;
+
+        img {
+            width: 75px;
+        }
+    }
+
+    &__cities {
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 24px;
+
+        &.active {
+            color: $orange;
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        color: #fff;
+        font-size: inherit;
+
+        &.active {
+            color: $orange;
+        }
+
+        & + .footer__button {
+            margin-left: 12px;
+        }
+    }
+
+    &__link {
+        display: block;
+        font-size: 28px;
+        line-height: 28px;
+        font-family: bold;
+
+        &--phone {
+            margin-bottom: 24px;
+        }
+
+        &--email {
+            margin-bottom: 28px;
+        }
+    }
+
+    &__list {
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 40px;
+    }
+
+    &__item {
+        display: inline-block;
+        color: #fff;
+
+        &--button {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        & + .footer__item {
+            margin-left: 24px;
+        }
+    }
+
+    &__info {
+
+        span {
+            display: block;
+            opacity: 0.3;
+            font-size: 14px;
+            line-height: 16px;
+            margin-bottom: 12px;
+        }
+
+        h3 {
+            font-size: 16px;
+            line-height: 18px;
+            font-family: bold;
+            width: 150px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        padding-bottom: 43px;
+
+        &__logo {
+            display: inline-block;
+            margin-bottom: 0;
+
+            img {
+                width: 176px;
+            }
+        }
+
+        &__left {
+            width: span(9 of 12);
+            display: inline-block;
+        }
+
+
+        &__right {
+            vertical-align: top;
+            display: inline-block;
+            width: span(3 of 12);
+            text-align: right;
+        }
+
+        &__content {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 18px;
+        }
+
+        &__cities {
+            margin-bottom: 13px;
+        }
+
+        &__link {
+            display: inline-block;
+            font-size: 16px;
+            line-height: 26px;
+
+            & + .footer__link {
+                margin-left: 24px;
+            }
+
+            &--phone {
+                margin-bottom: 0;
+            }
+
+            &--email {
+                margin-bottom: 0;
+            }
+        }
+
+        &__list {
+            font-size: 14px;
+            line-height: 16px;
+            margin: 16px 0 0 0;
+        }
+
+        &__info {
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+            width: span(2.5 of 3);
+
+            span {
+                margin-bottom: 14px;
+            }
+
+            h3 {
+                font-size: 14px;
+                line-height: 20px;
+                width: 135px;
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        padding: toRem(70) 0 toRem(84) 0;
+
+        &__logo {
+
+            img {
+                width: toRem(199);
+            }
+        }
+
+        &__cities {
+            font-size: toRem(14);
+            line-height: toRem(16);
+            margin-bottom: toRem(13);
+        }
+
+        &__button {
+
+            & + .footer__button {
+                margin-left: toRem(12);
+            }
+        }
+
+        &__link {
+            font-size: toRem(28);
+            line-height: toRem(28);
+
+            & + .footer__link {
+                margin-left: toRem(32);
+            }
+        }
+
+        &__list {
+            font-size: toRem(14);
+            line-height: toRem(16);
+            margin-top: toRem(12);
+        }
+
+        &__item {
+
+            & + .footer__item {
+                margin-left: toRem(24);
+            }
+
+            &--button {
+                font-size: toRem(14);
+                line-height: toRem(16);
+            }
+        }
+
+        &__info {
+
+            span {
+                font-size: toRem(14);
+                line-height: toRem(16);
+                margin-bottom: toRem(12);
+            }
+
+            h3 {
+                font-size: toRem(16);
+                line-height: toRem(18);
+                width: toRem(150);
+            }
+        }
+    }
+}

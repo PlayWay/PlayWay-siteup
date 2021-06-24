@@ -1,0 +1,156 @@
+@media (min-width: 1200px) {
+    .link {
+        transition: .2s ease;
+        transition-property: color,border-color;
+
+        &:hover {
+            color: $orange;
+
+            span {
+                border-color: $orange;
+            }
+        }
+
+        &--dashed {
+            &:hover {
+                span {
+                    border-color: $orange;
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__button {
+
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+
+    .button {
+
+        &--dashed {
+            transition: .2s ease;
+            transition-property: color,border-color;
+
+            &:hover {
+                color: $orange;
+                border-color: $orange;
+            }
+        }
+
+        &--white {
+            transition: background-color .2s ease,transform 1.8s cubic-bezier(.19,1,.22,1);
+
+            &:hover {
+                background-color: #F7931E;
+            }
+        }
+
+        &--orange {
+            transition: .2s ease;
+            transition-property: background-color;
+            &:hover {
+                background-color: #FCA846;
+            }
+        }
+
+        &--transparent {
+            transition: .2s ease;
+            transition-property: border-color,color,background-color;
+
+            &:hover {
+                border-color: #fff;
+            }
+        }
+
+        &--close {
+
+            &:before {
+                transition: background-color .3s ease;
+            }
+
+            &:after {
+                transition: background-color .3s ease;
+            }
+
+            &:hover {
+                &:before {
+                    background-color: $orange;
+                }
+
+                &:after {
+                    background-color: $orange;
+                }
+            }
+
+        }
+    }
+
+    .step {
+        &__checkbox {
+
+            span {
+                transition: .2s ease;
+                transition-property: border-color,background-color;
+
+                &:hover {
+                    border-color: $orange;
+                }
+            }
+
+        }
+    }
+
+    .projects{
+        &__item{
+            transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1), background-color .1s ease 1.3s,opacity 1s cubic-bezier(0.19, 1, 0.22, 1);
+            h2,span{
+                transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+            &:hover{
+                .projects{
+                    &__img{
+                        opacity: 0.8;
+                    }
+                }
+                h2,span{
+                    transform: translate(0);
+                }
+                span{
+                    transition-delay: 0.05s;
+                }
+
+            }
+        }
+        &__img{
+            transition:opacity 0.3s ease;
+        }
+
+    }
+
+    .header {
+        &__cities-list {
+
+            span {
+                transition: background-color .3s ease;
+
+                &:hover {
+                    background-color: #F3F3F3;
+                }
+            }
+        }
+    }
+
+    .img {
+        &__button-img {
+            transition: transform .2s ease;
+            &:hover {
+                transform: scale(.9);
+            }
+        }
+    }
+}
+

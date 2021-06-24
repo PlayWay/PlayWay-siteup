@@ -1,0 +1,301 @@
+.projects {
+    color: #fff;
+
+    &__wrapper {
+        margin-bottom: 31px;
+        max-height: 150vw;
+        overflow: hidden;
+        font-size: 0;
+        &.active {
+            max-height: 600vw;
+        }
+    }
+
+    &__item {
+        display: block;
+        box-sizing: border-box;
+        padding: 12px 6.25%;
+        height: 50vw;
+        color: #fff;
+        position: relative;
+        //background-color: #000;
+        font-family: bold;
+        font-size: 16px;
+        line-height: 18px;
+        z-index: 1;
+
+        &.show {
+            background-color: #000;
+            img {
+                opacity: 1;
+                pointer-events: all;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        span {
+            position: absolute;
+            max-width: 299px;
+            width: 100%;
+            bottom: 30px;
+            left: 25px;
+            z-index: 1;
+        }
+
+        &--turist {
+            background-color: #3069d3;
+        }
+
+        &--eurokom {
+            background-color: $orange;
+        }
+
+        &--biopack {
+            background-color: #57a2b5;
+        }
+
+        &--psb {
+            background-color: #2a4795;
+        }
+
+        &--gruzmotor {
+            background-color: #401528;
+        }
+
+        &--sprayer {
+            background-color: #1d1d1d;
+        }
+
+        &--rombico {
+            background-color: #503b38;
+        }
+
+        &--greenline {
+            background-color: #f2ffd4;
+        }
+
+        &--tropic {
+            background-color: #f4d96d;
+        }
+
+        &--buhanka {
+            background-color: #3b2513;
+        }
+
+        &--makros {
+            background-color: #b6cded;
+        }
+
+        &--telemaxima {
+            background-color: #113879;
+        }
+    }
+
+    &__title {
+        display: block;
+        color: #fff;
+        position: absolute;
+        top: 15px;
+        left: 25px;
+        z-index: 1;
+
+        &--site {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    &__content {
+        //opacity: 0;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        opacity:0.8;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: scale(1.05) translate(-50%,-50%);
+            height: 100%;
+            z-index: 2;
+            transition: transform 0.7s cubic-bezier(0, 0, 0, 1),opacity 0.7s linear;
+            transform-origin: center;
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &__button {
+        display: none;
+        width: 280px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 18px;
+        color: #fff;
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        margin: 0 auto;
+
+        &.active {
+            display: block;
+        }
+
+        &:active {
+            background-color: #fff;
+            color: $black;
+        }
+    }
+
+    &__info {
+        font-family: bold;
+        padding: 0 6.25%;
+        margin-top: 80px;
+
+        h2 {
+            font-size: 20px;
+            line-height: 26px;
+            margin-bottom: 40px;
+            max-width: 284px;
+        }
+    }
+
+    &__block {
+        display: inline-block;
+        line-height: 38px;
+
+        span {
+            font-size: 64px;
+        }
+
+        p {
+            font-size: 28px;
+        }
+
+        & + .projects__block {
+            margin-left: 30px;
+        }
+    }
+
+    @media (min-width: 600px) {
+
+        &__wrapper {
+            margin-bottom: 81px;
+            max-height: none;
+        }
+
+        &__info {
+            padding: 0 5.2%;
+        }
+
+        &__block {
+
+            p {
+                font-size: 32px;
+            }
+
+            & + .projects__block {
+                margin-left: 41px;
+            }
+        }
+
+        &__item {
+            width: 50%;
+            display: inline-block;
+            height: 192px;
+            padding: 20px;
+        }
+
+        &__button {
+            display: none;
+
+            &.active {
+                display: none;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        &__item {
+            height: 25vw;
+        }
+
+        &__info {
+            padding: 0 span(1 of 14);
+
+            h2 {
+                display: inline-block;
+                margin-right: 54px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+
+        &__wrapper {
+            margin-bottom: toRem(96);
+        }
+
+        &__info {
+            padding: 0 span(1 of 12);
+
+            h2 {
+                font-size: toRem(24);
+                line-height: toRem(28);
+                margin-right: toRem(101);
+                max-width: toRem(400);
+            }
+        }
+
+        &__block {
+            line-height: normal;
+
+            span {
+                font-size: toRem(64);
+                display: inline-block;
+            }
+
+            p {
+                font-size: toRem(32);
+            }
+
+            & + .projects__block {
+                margin-left: toRem(41);
+            }
+        }
+
+        &__item {
+            padding: toRem(20) toRem(23);
+            //height:toRem(300);
+            overflow: hidden;
+
+            span {
+                font-size: toRem(12);
+                line-height: toRem(18);
+                bottom: toRem(30);
+                left: toRem(25);
+                transform: translate(-140%,0);
+                max-width: toRem(299);
+            }
+        }
+
+        &__title {
+            font-size: toRem(20);
+            line-height: toRem(26);
+            margin-bottom: toRem(4);
+            top: toRem(15);
+            left: toRem(25);
+            transform: translate(-140%,0);
+        }
+
+        &__img{
+            opacity: 1;
+        }
+    }
+}

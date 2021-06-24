@@ -1,0 +1,46 @@
+.order {
+    padding-top: 57px;
+    margin-bottom: 96px;
+    color: #fff;
+
+    &__form {
+        max-width: 400px;
+
+        &.send {
+            .form__response--order {
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+    }
+
+    @media (min-width: 600px) {
+        &__form {
+            max-width: 600px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        padding-top: 93px;
+        &__form {
+            width: span(10 of 12);
+        }
+    }
+
+    @media (min-width: 1000px) {
+        &__form {
+            width: 100%;
+            max-width: 860px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        margin-bottom: toRem(160);
+        padding-top: toRem(142);
+
+        &__form {
+            width: span(17 of 20);
+            max-width: 1275px;
+        }
+    }
+}
